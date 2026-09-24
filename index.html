@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <!-- Essential Mobile Viewport Settings -->
+  <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+  
+  <!-- Mobile Browser Styling & Standalone Support -->
+  <meta name="theme-color" content="#1e293b" />
+  <meta name="apple-mobile-web-app-capable" content="yes" />
+  <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent" />
+  
+  <title>Daily Gym Tracker</title>
+  <link rel="stylesheet" href="style.css" />
+</head>
+<body>
+
+  <!-- Top App Bar -->
+  <header class="mobile-header">
+    <div>
+      <h1>Gym Routine</h1>
+      <span id="active-day-title" class="sub-heading">Monday Routine</span>
+    </div>
+    <button id="reset-btn" class="text-btn" aria-label="Reset routine checkboxes">Reset</button>
+  </header>
+
+  <!-- Sticky Day Tab Bar -->
+  <nav class="tabs-nav" aria-label="Day selection">
+    <div class="tabs-scroll">
+      <button class="tab-btn" data-day="1">Mon</button>
+      <button class="tab-btn" data-day="2">Tue</button>
+      <button class="tab-btn" data-day="3">Wed</button>
+      <button class="tab-btn" data-day="4">Thu</button>
+      <button class="tab-btn" data-day="5">Fri</button>
+    </div>
+  </nav>
+
+  <!-- Dynamic Content Container -->
+  <main class="content-container">
+    <div id="workout-container" aria-live="polite">
+      <!-- Generated via JavaScript -->
+    </div>
+  </main>
+
+  <!-- Fullscreen Image Preview Modal -->
+  <div id="image-modal" class="modal hidden" role="dialog" aria-hidden="true">
+    <button id="modal-close" class="modal-close-btn" aria-label="Close preview">&times;</button>
+    <img id="modal-img" src="" alt="Exercise detail view" />
+    <p id="modal-caption" class="modal-caption"></p>
+  </div>
+
+  <script src="app.js"></script>
+</body>
+</html>
